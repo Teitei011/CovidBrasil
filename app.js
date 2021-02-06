@@ -9,10 +9,22 @@
 
 setup("Botucatu");
 
+let covidGraphs = [];
+console.log(covidGraphs);
+
+
+function removeGraphs(){
+  for (let i = 0; i < 6; i++){
+    covidGraphs[i].destroy();
+  }
+  covidGraphs = [];
+}
 
 function myFunction(elmnt, answer) {
+  removeGraphs();
   setup(answer);
   console.log("Changing to " + answer);
+  console.log(covidGraphs);
 }
 
 
@@ -61,15 +73,15 @@ async function setup(locationName) {
 
 async function graphIt(chartId, label, date, data_covid) {
   const ctx = document.getElementById(chartId).getContext("2d");
-   chartId = new Chart(ctx, {
-    type: "bar",
+  covidGraphs.push(new Chart(ctx, {
+    type: "line",
     data: {
       labels: date,
       datasets: [
         {
           label: label,
           data: data_covid,
-          fill: false,
+          fill: true,
           borderColor: "rgba(0, 125, 255, 1)",
           backgroundColor: "rgba(0, 0, 255, 0.5)",
           borderWidth: 1,
@@ -77,7 +89,7 @@ async function graphIt(chartId, label, date, data_covid) {
       ],
     },
     options: {},
-  });
+  }));
 }
 
 async function getData(locationName) {
