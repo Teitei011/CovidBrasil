@@ -2,13 +2,8 @@
 
 ## Descrição
 
-Esse site foi feito para que todos consigam ver como está a propagação do Covid em suas próprias cidades. 
+Esse programa pega dados do site https://github.com/wcota/covid19br e separa para por cidades e estados com a finalidade de cada cidadão brasileiro ter acesso aos dados do Covid-19 de sua localidade 
 
-Sempre quando ligamos a televisão vemos como está o nosso estado/país mas não sabemos como está o nosso município. Esse site tem a intenção de nos ajudar nesse quesito.
-## Comentários
-
-- De pouco em pouco estou adicionando cidades a pedido de amigos. 
-- Prentendo colocar todas as cidades do Brasil nessa lista mais ainda estou desenvolvendo o programa.
 
 
 **Dicas, comentários e sugestões são sempre bem vindas**
